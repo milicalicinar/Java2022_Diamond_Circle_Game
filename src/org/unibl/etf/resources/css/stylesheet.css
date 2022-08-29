@@ -1,0 +1,11 @@
+.root{
+}
+
+.box{
+    -fx-border-color: black;
+}
+
+.underline{
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: black;
+}

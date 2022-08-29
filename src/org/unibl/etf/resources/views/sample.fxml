@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600.0" minWidth="800.0" prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.unibl.etf.controller.MainController">
+   <center>
+      <VBox BorderPane.alignment="CENTER">
+         <GridPane fx:id="grid" gridLinesVisible="true" VBox.vgrow="ALWAYS">
+            <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <VBox.margin>
+               <Insets bottom="15.0" left="15.0" right="15.0" />
+            </VBox.margin>
+         </GridPane>
+         <VBox alignment="CENTER" minHeight="106.0" minWidth="377.0" prefHeight="106.0" prefWidth="377.0" styleClass="box">
+            <VBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" />
+            </VBox.margin>
+            <Label text="Opis značenja karte:" />
+            <Label prefHeight="54.0" prefWidth="361.0" text="Npr. Na poteyu igrač 2, figura 3, prelazi 3 polja, pomjera se sa polja X na polje Y" textAlignment="CENTER" wrapText="true" />
+         </VBox>
+      </VBox>
+   </center>
+   <right>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets right="10.0" />
+         </BorderPane.margin>
+         <VBox alignment="TOP_CENTER" prefHeight="315.0" prefWidth="202.0" spacing="5.0" styleClass="box" VBox.vgrow="ALWAYS">
+            <Label alignment="CENTER" prefHeight="34.0" prefWidth="181.0" styleClass="box" text="Trenutna karta">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Label>
+            <VBox alignment="CENTER" styleClass="box" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+               <ImageView fitHeight="192.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true" />
+               <Label text="Opis karte" />
+               <Label text="Label" />
+            </VBox>
+         </VBox>
+         <Label alignment="CENTER" prefHeight="38.0" prefWidth="205.0" styleClass="box" text="Vrijeme trajanja igre: 10 s" textAlignment="CENTER" wrapText="true">
+            <VBox.margin>
+               <Insets bottom="5.0" top="5.0" />
+            </VBox.margin>
+         </Label>
+         <StackPane minHeight="106.0" minWidth="200.0" prefHeight="106.0" prefWidth="200.0" styleClass="box">
+            <VBox.margin>
+               <Insets bottom="10.0" />
+            </VBox.margin>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="114.0" text="Prikaz liste fajlova sa rezultatima" textAlignment="CENTER" wrapText="true" />
+         </StackPane>
+      </VBox>
+   </right>
+   <left>
+      <ListView prefHeight="518.0" prefWidth="175.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </BorderPane.margin>
+      </ListView>
+   </left>
+   <top>
+      <VBox prefHeight="86.0" prefWidth="800.0" spacing="15.0" BorderPane.alignment="CENTER">
+         <HBox alignment="CENTER" prefHeight="53.0" prefWidth="800.0" styleClass="underline">
+            <padding>
+               <Insets left="15.0" right="15.0" />
+            </padding>
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <Label text="Broj odigranih igara:" />
+            <Label fx:id="lblNumOfGames" text="10" />
+            <Pane prefHeight="42.0" prefWidth="194.0" HBox.hgrow="ALWAYS" />
+            <Label prefHeight="18.0" prefWidth="103.0" text="DIAMOND CIRCLE" />
+            <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" text="Pokreni / Zaustavi" />
+         </HBox>
+         <HBox prefHeight="24.0" prefWidth="779.0" styleClass="box">
+            <VBox.margin>
+               <Insets bottom="10.0" left="10.0" right="10.0" />
+            </VBox.margin>
+            <padding>
+               <Insets left="15.0" right="15.0" />
+            </padding>
+            <Label fx:id="lblPlayer1" prefHeight="18.0" prefWidth="107.0" text="Player One" />
+            <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="lblPlayer2" prefHeight="18.0" prefWidth="105.0" text="Player Two" />
+            <Pane prefHeight="19.0" prefWidth="131.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="lblPlayer3" prefHeight="18.0" prefWidth="103.0" text="Player Three" />
+            <Pane prefHeight="19.0" prefWidth="130.0" HBox.hgrow="ALWAYS" />
+            <Label fx:id="lblPlayer4" prefHeight="18.0" prefWidth="78.0" text="Player Four" />
+         </HBox>
+      </VBox>
+   </top>
+</BorderPane>
