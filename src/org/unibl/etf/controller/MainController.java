@@ -7,7 +7,7 @@ import org.unibl.etf.exceptions.ReadConfigException;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
-import org.unibl.etf.models.util.GenerateCards;
+import org.unibl.etf.models.util.Generator;
 import org.unibl.etf.models.util.ReadConfig;
 
 import java.net.URL;
@@ -57,7 +57,7 @@ public class MainController implements Initializable {
             lblPlayer4.setVisible(false);
         }
 
-        GenerateCards.generateCards();
-        cardImage.setImage(GenerateCards.cards.get(0).getImage());
+        Generator.generateCards();
+        cardImage.setImage(Generator.cards.get(0).getImage());
     }
 }

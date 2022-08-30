@@ -10,7 +10,7 @@ import org.unibl.etf.models.card.SpecialCard;
 import java.util.LinkedList;
 import java.util.Random;
 
-public class GenerateCards {
+public class Generator {
     private static final int MAX_NUM_OF_CARDS=52;
     private static final int NUM_OF_REGULAR_CARDS=10;
     private static final int ONE_FIELD=1;
