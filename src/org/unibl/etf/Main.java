@@ -24,7 +24,7 @@ public class Main extends Application {
             handler=new FileHandler("application.log", true);
             LOGGER.addHandler(handler);
             Parent root = FXMLLoader.load(getClass().getResource("resources/views/sample.fxml"));
-            primaryStage.setTitle("Java Project");
+            primaryStage.setTitle("Java Project 2022");
             primaryStage.setScene(new Scene(root,
                     WIDTH,
                     HEIGHT));

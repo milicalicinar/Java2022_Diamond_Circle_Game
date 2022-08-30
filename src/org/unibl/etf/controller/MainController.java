@@ -1,11 +1,13 @@
 package org.unibl.etf.controller;
 
 import javafx.fxml.FXML;
+import javafx.scene.image.ImageView;
 import org.unibl.etf.Main;
 import org.unibl.etf.exceptions.ReadConfigException;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import org.unibl.etf.models.util.GenerateCards;
 import org.unibl.etf.models.util.ReadConfig;
 
 import java.net.URL;
@@ -26,6 +28,7 @@ public class MainController implements Initializable {
     public Label lblPlayer3;
     @FXML
     public Label lblPlayer4;
+    public ImageView cardImage;
     public int reduce;
     public final int MAX_GRID_SIZE=10;
 
@@ -53,5 +56,8 @@ public class MainController implements Initializable {
         }else if(ReadConfig.players.size() == ReadConfig.MIN_NUM_PLAYERS + 1){
             lblPlayer4.setVisible(false);
         }
+
+        GenerateCards.generateCards();
+        cardImage.setImage(GenerateCards.cards.get(0).getImage());
     }
 }

@@ -73,7 +73,7 @@
                <VBox.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" />
                </VBox.margin>
-               <ImageView fitHeight="192.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true" />
+               <ImageView fx:id="cardImage" fitHeight="192.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true" />
                <Label text="Opis karte" />
                <Label text="Label" />
             </VBox>
