@@ -112,7 +112,7 @@
             <Pane prefHeight="42.0" prefWidth="194.0" HBox.hgrow="ALWAYS" />
             <Label prefHeight="18.0" prefWidth="103.0" text="DIAMOND CIRCLE" />
             <Pane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
-            <Button mnemonicParsing="false" text="Pokreni / Zaustavi" />
+            <Button mnemonicParsing="false" onMouseClicked="#startPauseGame" text="Pokreni / Zaustavi" />
          </HBox>
          <HBox prefHeight="24.0" prefWidth="779.0" styleClass="box">
             <VBox.margin>

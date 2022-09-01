@@ -2,17 +2,21 @@ package org.unibl.etf.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import org.unibl.etf.Main;
 import org.unibl.etf.exceptions.ReadConfigException;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
+import org.unibl.etf.models.game.Game;
+import org.unibl.etf.models.tile.Tile;
 import org.unibl.etf.models.util.Generator;
 import org.unibl.etf.models.util.ReadConfig;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 
@@ -46,18 +50,27 @@ public class MainController implements Initializable {
             Main.LOGGER.log(Level.INFO, ex.toString(), ex);
         }
 
-        for(int i=0; i<ReadConfig.players.size(); i++){
-            labels.get(i).setText(ReadConfig.players.get(i));
+        Generator.generatePlayers();
+        for(int i=0; i<Generator.players.size(); i++){
+            labels.get(i).setText(Generator.players.get(i).getName());
         }
 
-        if(ReadConfig.players.size() == ReadConfig.MIN_NUM_PLAYERS){
+
+        if(Generator.players.size() == ReadConfig.MIN_NUM_PLAYERS){
             lblPlayer3.setVisible(false);
             lblPlayer4.setVisible(false);
-        }else if(ReadConfig.players.size() == ReadConfig.MIN_NUM_PLAYERS + 1){
+        }else if(Generator.players.size() == ReadConfig.MIN_NUM_PLAYERS + 1){
             lblPlayer4.setVisible(false);
         }
 
         Generator.generateCards();
-        cardImage.setImage(Generator.cards.get(0).getImage());
+
+
+
+    }
+
+    public void startPauseGame(MouseEvent mouseEvent) {
+        Game game = new Game(this);
+        game.start();
     }
 }
