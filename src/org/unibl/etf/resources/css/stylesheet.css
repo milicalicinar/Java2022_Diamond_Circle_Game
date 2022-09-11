@@ -9,3 +9,8 @@
     -fx-border-width: 0 0 1 0;
     -fx-border-color: black;
 }
+
+.stackpane{
+    -fx-background-color: #2f4f4f;
+    -fx-border-color: black;
+}

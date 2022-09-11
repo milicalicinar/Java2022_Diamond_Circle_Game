@@ -7,11 +7,13 @@ import java.util.LinkedList;
 
 public class Player {
     private String name;
+    private String color;
     private LinkedList<Pawn> playerPawns = new LinkedList<>();
 
-    public Player(String name, LinkedList<Pawn> playerPawns){
+    public Player(String name, LinkedList<Pawn> playerPawns, String color){
         this.name=name;
         this.playerPawns=playerPawns;
+        this.color=color;
     }
 
     public String getName(){
@@ -26,7 +28,19 @@ public class Player {
         return playerPawns;
     }
 
-    public void setPlayerPawns(LinkedList<Pawn> playerPawns) {
+    public void addPlayerPawn(Pawn pawn) {
+        this.playerPawns.addFirst(pawn);
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setPlayerPawns(LinkedList<Pawn> playerPawns){
         this.playerPawns = playerPawns;
     }
 }
